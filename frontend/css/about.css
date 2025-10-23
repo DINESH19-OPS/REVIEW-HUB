@@ -1,0 +1,177 @@
+/* About Page */
+.about-page {
+    padding: 2rem 0;
+}
+
+/* About Hero */
+.about-hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    border-radius: 8px;
+}
+
+/* Neon Hero for Neon Theme */
+body.neon-theme .about-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+/* Neon Hero Title for Neon Theme */
+body.neon-theme .about-hero h1 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 15px var(--neon-primary);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* Neon Hero Subtitle for Neon Theme */
+body.neon-theme .about-hero p {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* About Content */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+
+/* Neon Section Title for Neon Theme */
+body.neon-theme .about-text h2 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+.about-text p {
+    color: var(--text-color);
+}
+
+/* Neon Text for Neon Theme */
+body.neon-theme .about-text p {
+    color: var(--dark-text);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.about-text ul {
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-text li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Neon List Items for Neon Theme */
+body.neon-theme .about-text li {
+    color: var(--dark-text);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.about-text strong {
+    font-weight: bold;
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 3rem;
+}
+
+.team-section h2 {
+    color: var(--text-color);
+}
+
+/* Neon Team Title for Neon Theme */
+body.neon-theme .team-section h2 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Neon Team Member for Neon Theme */
+body.neon-theme .team-member {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.member-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+    margin: 0 auto 1rem;
+}
+
+/* Neon Avatar for Neon Theme */
+body.neon-theme .member-avatar {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    color: var(--neon-primary);
+    box-shadow: 0 0 15px var(--neon-primary);
+}
+
+.team-member h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Neon Member Name for Neon Theme */
+body.neon-theme .team-member h3 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+.team-member p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Neon Member Role for Neon Theme */
+body.neon-theme .team-member p {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-hero p {
+        font-size: 1rem;
+    }
+}

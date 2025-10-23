@@ -1,0 +1,242 @@
+/* Review Page */
+.review-page {
+    padding: 2rem 0;
+}
+
+/* Review Header */
+.review-header {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Neon Review Header for Neon Theme */
+body.neon-theme .review-header {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.review-header h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+/* Neon Review Title for Neon Theme */
+body.neon-theme .review-header h1 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 15px var(--neon-primary);
+}
+
+.review-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Neon Review Meta for Neon Theme */
+body.neon-theme .review-meta {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rating-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Neon Rating Value for Neon Theme */
+body.neon-theme .rating-value {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Review Body */
+.review-body {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Neon Review Body for Neon Theme */
+body.neon-theme .review-body {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.review-body p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/* Neon Review Text for Neon Theme */
+body.neon-theme .review-body p {
+    color: var(--dark-text);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Comments Section */
+.comments-section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Neon Comments Section for Neon Theme */
+body.neon-theme .comments-section {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.comments-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Neon Comments Title for Neon Theme */
+body.neon-theme .comments-section h2 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Comment Form */
+.comment-form {
+    margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Neon Comment Textarea for Neon Theme */
+body.neon-theme .comment-form textarea {
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--button-outline);
+    box-shadow: 0 0 0 2px var(--shadow-light);
+}
+
+/* Neon Comment Textarea Focus for Neon Theme */
+body.neon-theme .comment-form textarea:focus {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 0 2px rgba(0, 243, 255, 0.5);
+}
+
+/* Comments List */
+.comments-list {
+    margin-top: 2rem;
+}
+
+.comment {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Neon Comment Header for Neon Theme */
+body.neon-theme .comment-header {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.comment-body {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Neon Comment Body for Neon Theme */
+body.neon-theme .comment-body {
+    color: var(--dark-text);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.reply-form {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--border-color);
+    display: none;
+}
+
+/* Neon Reply Form for Neon Theme */
+body.neon-theme .reply-form {
+    border-left: 2px solid var(--neon-primary);
+}
+
+.reply-form.active {
+    display: block;
+}
+
+.nested-comments {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    border-left: 1px dashed var(--border-color);
+}
+
+/* Neon Nested Comments for Neon Theme */
+body.neon-theme .nested-comments {
+    border-left: 1px dashed var(--neon-primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .review-header h1 {
+        font-size: 2rem;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .review-body,
+    .review-header,
+    .comments-section {
+        padding: 1.5rem;
+    }
+}

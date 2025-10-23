@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Hub - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/neon-effects.css">
+    <link rel="stylesheet" href="css/Hyperspeed.css">
+</head>
+<body>
+    <!-- Hyperspeed Background -->
+    <div id="hyperspeed-background"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Review Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="movie-reviews.html">Movie Reviews</a></li>
+                    <li><a href="write-review.html">Write a Review</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero neon-hero">
+        <div class="container neon-hero-content">
+            <h1 class="neon-glow neon-flicker">Welcome to Review Hub</h1>
+            <p class="neon-glow">Your trusted source for honest reviews</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search reviews...">
+                <button id="search-btn" class="btn btn-primary neon-button neon-shadow">Search</button>
+            </div>
+            
+            <!-- Search Results Container -->
+            <div id="search-results" class="search-results neon-search-results"></div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="container">
+        <div class="category-filter">
+            <button class="btn btn-outline active" data-category="all">All Categories</button>
+            <button class="btn btn-outline" data-category="books">Books</button>
+            <button class="btn btn-outline" data-category="movies">Movies</button>
+            <button class="btn btn-outline" data-category="restaurants">Restaurants</button>
+            <button class="btn btn-outline" data-category="products">Products</button>
+        </div>
+    </section>
+
+    <!-- Rating Filter -->
+    <section class="container">
+        <div class="rating-filter">
+            <label for="rating-sort">Sort by Rating:</label>
+            <select id="rating-sort">
+                <option value="newest">Newest First</option>
+                <option value="rating-high">Highest Rated</option>
+                <option value="rating-low">Lowest Rated</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Featured Reviews -->
+    <section class="featured-reviews">
+        <div class="container">
+            <h2 class="neon-glow">Featured Reviews</h2>
+            <div class="reviews-grid" id="featured-reviews-grid">
+                <!-- Featured reviews will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Reviews -->
+    <section class="recent-reviews">
+        <div class="container">
+            <h2 class="neon-glow">Recent Reviews</h2>
+            <div class="reviews-grid" id="recent-reviews-grid">
+                <!-- Recent reviews will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal neon-modal">
+        <div class="modal-content neon-modal-content">
+            <span class="close neon-close">&times;</span>
+            <h2 class="neon-glow">Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" class="neon-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="neon-input" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary neon-button">Login</button>
+                    <button type="button" class="btn btn-outline neon-button" id="switch-to-signup">Sign Up Instead</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal neon-modal">
+        <div class="modal-content neon-modal-content">
+            <span class="close neon-close">&times;</span>
+            <h2 class="neon-glow">Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" class="neon-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" class="neon-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" class="neon-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-bio">Bio (Optional)</label>
+                    <textarea id="signup-bio" class="neon-input" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary neon-button">Sign Up</button>
+                    <button type="button" class="btn btn-outline neon-button" id="switch-to-login">Login Instead</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="neon-glow">Review Hub</h3>
+                    <p>Your trusted platform for honest reviews.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Contact</h4>
+                    <p>Email: info@reviewhub.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Follow Us</h4>
+                    <div class="social-icons">
+                        <span class="icon neon-border">f</span>
+                        <span class="icon neon-border">t</span>
+                        <span class="icon neon-border">in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Review Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Hub - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/neon-effects.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Review Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="movie-reviews.html">Movie Reviews</a></li>
+                    <li><a href="write-review.html">Write a Review</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-page">
+        <div class="container">
+            <!-- User Info Section -->
+            <section class="user-info neon-card">
+                <div class="avatar">
+                    <div class="avatar-placeholder neon-border">U</div>
+                </div>
+                <div class="user-details">
+                    <h2 id="user-name" class="neon-glow">John Doe</h2>
+                    <p id="user-bio">A passionate reviewer who loves sharing honest opinions about books, movies, and more.</p>
+                    <div class="user-stats">
+                        <div class="stat">
+                            <span class="stat-value neon-glow" id="reviews-count">24</span>
+                            <span class="stat-label neon-glow">Reviews</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value neon-glow" id="comments-count">128</span>
+                            <span class="stat-label neon-glow">Comments</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Reviews Section -->
+            <section class="user-reviews">
+                <h2 class="neon-glow">Your Reviews</h2>
+                <div class="reviews-list" id="user-reviews-list">
+                    <!-- User reviews will be loaded here dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="neon-glow">Review Hub</h3>
+                    <p>Your trusted platform for honest reviews.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Contact</h4>
+                    <p>Email: info@reviewhub.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Follow Us</h4>
+                    <div class="social-icons">
+                        <span class="icon neon-border">f</span>
+                        <span class="icon neon-border">t</span>
+                        <span class="icon neon-border">in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Review Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

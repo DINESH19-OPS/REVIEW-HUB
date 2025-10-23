@@ -1,0 +1,290 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon Hero for Neon Theme */
+body.neon-theme .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255,255,255,0.1) 0%, transparent 20%);
+    background-size: 200px 200px;
+    opacity: 0.5;
+}
+
+/* Neon Hero Pattern for Neon Theme */
+body.neon-theme .hero::before {
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 20%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+/* Neon Hero Title for Neon Theme */
+body.neon-theme .hero h1 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 15px var(--neon-primary);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Neon Hero Subtitle for Neon Theme */
+body.neon-theme .hero p {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* Search Container */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* Neon Search Input for Neon Theme */
+body.neon-theme #search-input {
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--button-outline);
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Neon Search Focus for Neon Theme */
+body.neon-theme #search-input:focus {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+#search-btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-result-item {
+    background: var(--card-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Neon Search Results for Neon Theme */
+body.neon-theme .search-result-item {
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+}
+
+.search-result-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px var(--shadow-dark);
+}
+
+/* Neon Search Result Hover for Neon Theme */
+body.neon-theme .search-result-item:hover {
+    box-shadow: 0 0 15px var(--neon-primary);
+}
+
+.search-result-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Neon Search Result Title for Neon Theme */
+body.neon-theme .search-result-title {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.search-result-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Neon Search Result Excerpt for Neon Theme */
+body.neon-theme .search-result-excerpt {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Sections */
+.featured-reviews,
+.recent-reviews {
+    padding: 2rem 0;
+}
+
+.featured-reviews {
+    background-color: #fafafa;
+}
+
+/* Neon Featured Reviews for Neon Theme */
+body.neon-theme .featured-reviews {
+    background-color: #1a1a1a;
+}
+
+.featured-reviews h2,
+.recent-reviews h2 {
+    text-align: center;
+}
+
+/* Neon Section Titles for Neon Theme */
+body.neon-theme .featured-reviews h2,
+body.neon-theme .recent-reviews h2 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Review Cards */
+.review-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-medium);
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 4px 12px var(--shadow-dark);
+    transform: translateY(-5px);
+}
+
+.review-card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.review-card-body p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.read-more {
+    color: var(--button-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.read-more:hover {
+    color: var(--button-hover);
+}
+
+/* Neon Review Cards for Neon Theme */
+body.neon-theme .review-card {
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    border: 1px solid var(--neon-primary);
+    transition: all 0.3s ease;
+}
+
+body.neon-theme .review-card:hover {
+    box-shadow: 0 0 20px var(--neon-primary);
+    border: 1px solid var(--neon-secondary);
+    transform: translateY(-5px);
+}
+
+/* Neon Review Card Headers for Neon Theme */
+body.neon-theme .review-card-header h3 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+/* Neon Review Card Body for Neon Theme */
+body.neon-theme .review-card-body p {
+    color: var(--dark-secondary);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Neon Read More Links for Neon Theme */
+body.neon-theme .read-more {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+body.neon-theme .read-more:hover {
+    color: var(--neon-secondary);
+    text-shadow: 0 0 10px var(--neon-secondary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    #search-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}

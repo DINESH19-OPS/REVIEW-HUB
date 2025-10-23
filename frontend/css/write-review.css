@@ -1,0 +1,118 @@
+/* Write Review Page */
+.write-review-page {
+    padding: 2rem 0;
+}
+
+.write-review-page h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+/* Neon Page Title for Neon Theme */
+body.neon-theme .write-review-page h1 {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Review Form */
+.review-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+/* Neon Form for Neon Theme */
+body.neon-theme .review-form {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 2rem;
+    color: var(--star-default);
+    margin: 1rem 0;
+}
+
+.star {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star:hover,
+.star.active {
+    color: var(--star-filled);
+    transform: scale(1.1);
+}
+
+/* Neon Stars for Neon Theme */
+body.neon-theme .star-rating {
+    color: #555;
+}
+
+body.neon-theme .star:hover,
+body.neon-theme .star.active {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Validation Styles */
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    border-color: var(--button-outline);
+    box-shadow: 0 0 0 2px var(--shadow-light);
+}
+
+/* Neon Validation for Neon Theme */
+body.neon-theme .form-group input.invalid,
+body.neon-theme .form-group select.invalid,
+body.neon-theme .form-group textarea.invalid {
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 0 2px rgba(0, 243, 255, 0.3);
+}
+
+.error-message {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+/* Neon Error Message for Neon Theme */
+body.neon-theme .error-message {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.invalid + .error-message {
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .review-form {
+        padding: 1.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

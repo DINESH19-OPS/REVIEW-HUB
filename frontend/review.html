@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Hub - Review Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/neon-effects.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Review Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="write-review.html">Write a Review</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="review-page">
+        <div class="container">
+            <!-- Review Header -->
+            <header class="review-header neon-card">
+                <h1 id="review-title" class="neon-glow">The Great Gatsby</h1>
+                <div class="review-meta">
+                    <div class="author">Reviewed by <span id="review-author" class="neon-glow">Jane Smith</span></div>
+                    <div class="date">Posted on <span id="review-date" class="neon-glow">June 15, 2025</span></div>
+                </div>
+                <div class="rating">
+                    <div class="star-rating neon-star-rating" id="review-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span class="rating-value neon-glow">4.0</span>
+                </div>
+            </header>
+
+            <!-- Review Body -->
+            <article class="review-body neon-card">
+                <p id="review-content">
+                    "The Great Gatsby" is a masterpiece of American literature that captures the essence of the Jazz Age with remarkable precision and artistry. F. Scott Fitzgerald's prose is both lyrical and incisive, painting a vivid portrait of the American Dream's corruption and ultimate emptiness.
+                </p>
+                <p>
+                    The character development is exceptional, particularly Jay Gatsby himself, whose tragic pursuit of the unattainable Daisy Buchanan serves as the novel's central theme. Fitzgerald's symbolism is rich and layered, from the green light at the end of Daisy's dock to the eyes of Doctor T.J. Eckleburg overlooking the Valley of Ashes.
+                </p>
+                <p>
+                    While the novel's critique of 1920s American society remains relevant today, some readers may find the pacing slow compared to contemporary fiction. The themes of wealth, love, and disillusionment are explored with sophistication, but the moral ambiguity of the characters may be challenging for some readers.
+                </p>
+                <p>
+                    Overall, "The Great Gatsby" is essential reading for anyone interested in American literature. Its exploration of the American Dream's dark underbelly is as relevant today as it was nearly a century ago.
+                </p>
+            </article>
+
+            <!-- Comments Section -->
+            <section class="comments-section neon-card">
+                <h2 class="neon-glow">Comments</h2>
+                
+                <!-- Comment Form -->
+                <form id="comment-form" class="comment-form">
+                    <textarea id="comment-text" class="neon-border" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="btn btn-primary neon-button neon-shadow">Post Comment</button>
+                </form>
+                
+                <!-- Comments List -->
+                <div class="comments-list" id="comments-list">
+                    <!-- Comments will be loaded here dynamically -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="neon-glow">Review Hub</h3>
+                    <p>Your trusted platform for honest reviews.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Contact</h4>
+                    <p>Email: info@reviewhub.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Follow Us</h4>
+                    <div class="social-icons">
+                        <span class="icon neon-border">f</span>
+                        <span class="icon neon-border">t</span>
+                        <span class="icon neon-border">in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Review Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/review.js"></script>
+</body>
+</html>

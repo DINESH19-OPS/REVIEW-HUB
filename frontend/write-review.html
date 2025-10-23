@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Hub - Write a Review</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/write-review.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/neon-effects.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Review Hub</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="movie-reviews.html">Movie Reviews</a></li>
+                    <li><a href="write-review.html" class="active">Write a Review</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="signup-btn" class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="write-review-page">
+        <div class="container">
+            <h1 class="neon-glow">Write a Review</h1>
+            
+            <form id="review-form" class="review-form neon-card">
+                <div class="form-group">
+                    <label for="review-title" class="neon-glow">Title</label>
+                    <input type="text" id="review-title" name="title" class="neon-border" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-category" class="neon-glow">Category</label>
+                    <select id="review-category" name="category" class="neon-border" required>
+                        <option value="">Select a category</option>
+                        <option value="books">Books</option>
+                        <option value="movies">Movies</option>
+                        <option value="restaurants">Restaurants</option>
+                        <option value="products">Products</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="neon-glow">Rating</label>
+                    <div class="star-rating neon-star-rating" id="star-rating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                    <input type="hidden" id="rating-value" name="rating" value="0">
+                </div>
+                
+                <div class="form-group">
+                    <label for="review-body" class="neon-glow">Review</label>
+                    <textarea id="review-body" name="body" rows="10" class="neon-border" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary neon-button neon-shadow">Submit Review</button>
+                    <button type="reset" class="btn btn-outline neon-button">Clear</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="neon-glow">Review Hub</h3>
+                    <p>Your trusted platform for honest reviews.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Contact</h4>
+                    <p>Email: info@reviewhub.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="neon-glow">Follow Us</h4>
+                    <div class="social-icons">
+                        <span class="icon neon-border">f</span>
+                        <span class="icon neon-border">t</span>
+                        <span class="icon neon-border">in</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Review Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/write-review.js"></script>
+</body>
+</html>

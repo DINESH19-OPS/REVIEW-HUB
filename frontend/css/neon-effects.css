@@ -1,0 +1,443 @@
+/* Neon Effects CSS for Review Hub */
+
+/* Neon Glow Effects */
+.neon-glow {
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.neon-glow-secondary {
+    text-shadow: 0 0 5px var(--neon-secondary);
+}
+
+.neon-glow-accent {
+    text-shadow: 0 0 5px var(--neon-accent);
+}
+
+.neon-glow-green {
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-glow-blue {
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.neon-glow-pink {
+    text-shadow: 0 0 5px var(--neon-pink);
+}
+
+.neon-glow-yellow {
+    text-shadow: 0 0 5px var(--neon-yellow);
+}
+
+.neon-glow-purple {
+    text-shadow: 0 0 5px var(--neon-purple);
+}
+
+/* Neon Box Shadows */
+.neon-shadow {
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+.neon-shadow-secondary {
+    box-shadow: 0 0 10px var(--neon-secondary);
+}
+
+.neon-shadow-accent {
+    box-shadow: 0 0 10px var(--neon-accent);
+}
+
+/* Neon Borders */
+.neon-border {
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 5px var(--neon-primary);
+}
+
+.neon-border-secondary {
+    border: 1px solid var(--neon-secondary);
+    box-shadow: 0 0 5px var(--neon-secondary);
+}
+
+.neon-border-accent {
+    border: 1px solid var(--neon-accent);
+    box-shadow: 0 0 5px var(--neon-accent);
+}
+
+/* Neon Animations */
+@keyframes neon-pulse {
+    0% {
+        text-shadow: 0 0 5px var(--neon-primary);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--neon-primary);
+    }
+    100% {
+        text-shadow: 0 0 5px var(--neon-primary);
+    }
+}
+
+@keyframes neon-glow-pulse {
+    0% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--neon-primary);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+}
+
+@keyframes neon-flicker {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 5px var(--neon-primary);
+    }
+    50% {
+        opacity: 0.9;
+        text-shadow: 0 0 15px var(--neon-primary), 0 0 30px var(--neon-primary);
+    }
+}
+
+.neon-pulse {
+    animation: neon-pulse 2s infinite;
+}
+
+.neon-glow-pulse {
+    animation: neon-glow-pulse 2s infinite;
+}
+
+.neon-flicker {
+    animation: neon-flicker 3s infinite;
+}
+
+/* Neon Button Effects */
+.neon-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.neon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.neon-button:hover::before {
+    left: 100%;
+}
+
+/* Neon Text Gradient */
+.neon-gradient-text {
+    background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary), var(--neon-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+/* Neon Hover Effects */
+.neon-hover {
+    transition: all 0.3s ease;
+}
+
+.neon-hover:hover {
+    text-shadow: 0 0 10px var(--neon-primary);
+    transform: translateY(-2px);
+}
+
+/* Neon Card Effects */
+.neon-card {
+    transition: all 0.3s ease;
+}
+
+.neon-card:hover {
+    box-shadow: 0 0 20px var(--neon-primary);
+    transform: translateY(-5px);
+}
+
+/* Enhanced neon card effect */
+.neon-card-enhanced {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.neon-card-enhanced::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary), var(--neon-accent), var(--neon-primary));
+    z-index: -1;
+    border-radius: 10px;
+    animation: neon-border-animation 3s linear infinite;
+    background-size: 400%;
+}
+
+.neon-card-enhanced:hover {
+    transform: translateY(-5px);
+}
+
+.neon-card-enhanced:hover::before {
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+@keyframes neon-border-animation {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Neon Link Effects */
+.neon-link {
+    position: relative;
+    color: var(--neon-primary);
+}
+
+.neon-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--neon-primary);
+    transition: width 0.3s ease;
+}
+
+.neon-link:hover::after {
+    width: 100%;
+}
+
+/* Neon Input Focus Effects */
+.neon-input:focus {
+    outline: none;
+    border-color: var(--neon-primary);
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Neon Star Rating */
+.neon-star-rating .star {
+    transition: all 0.2s ease;
+}
+
+.neon-star-rating .star:hover,
+.neon-star-rating .star.active {
+    color: var(--neon-primary);
+    text-shadow: 0 0 10px var(--neon-primary);
+    transform: scale(1.2);
+}
+
+/* Neon Progress Bar */
+.neon-progress {
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.neon-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+/* Neon Badge */
+.neon-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: var(--neon-primary);
+    color: #000;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 0 0 5px var(--neon-primary);
+}
+
+/* Neon Alert */
+.neon-alert {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 10px var(--neon-primary);
+    color: var(--neon-primary);
+}
+
+/* Neon Divider */
+.neon-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-primary), transparent);
+    margin: 20px 0;
+    box-shadow: 0 0 5px var(--neon-primary);
+}
+
+/* Neon Modal */
+.neon-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.neon-modal-content {
+    background-color: var(--card-bg);
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid var(--neon-primary);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 20px var(--neon-primary);
+    position: relative;
+    animation: neon-modal-appear 0.3s ease;
+}
+
+@keyframes neon-modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.neon-close {
+    color: var(--neon-primary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.neon-close:hover {
+    color: var(--neon-secondary);
+    text-shadow: 0 0 10px var(--neon-secondary);
+}
+
+/* Neon Loading Spinner */
+.neon-spinner {
+    border: 4px solid rgba(0, 243, 255, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid var(--neon-primary);
+    width: 40px;
+    height: 40px;
+    animation: neon-spin 1s linear infinite, neon-pulse-border 2s infinite;
+    margin: 1rem auto;
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+@keyframes neon-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes neon-pulse-border {
+    0% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--neon-primary);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+}
+
+/* Neon Search Results */
+.neon-search-results {
+    margin-top: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 10px var(--neon-primary);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.neon-search-result-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--neon-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.neon-search-result-item:last-child {
+    border-bottom: none;
+}
+
+.neon-search-result-item:hover {
+    background-color: rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 10px var(--neon-primary) inset;
+}
+
+.neon-search-result-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.neon-search-result-excerpt {
+    color: var(--dark-secondary);
+    font-size: 0.9rem;
+}
+
+/* Neon Hero Section */
+.neon-hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--secondary-bg) 100%);
+    margin-bottom: 3rem;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.neon-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
+    animation: neon-hero-ripple 10s infinite linear;
+    z-index: 0;
+}
+
+@keyframes neon-hero-ripple {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neon-hero-content {
+    position: relative;
+    z-index: 1;
+}

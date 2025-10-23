@@ -1,0 +1,303 @@
+/* Movie Reviews Page Styles */
+
+/* Hero Section */
+.movie-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+}
+
+.movie-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.1) 0%, transparent 20%);
+    background-size: 200px 200px;
+    opacity: 0.5;
+}
+
+.movie-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    color: var(--neon-primary);
+    text-shadow: 0 0 15px var(--neon-primary);
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+.movie-hero p {
+    font-size: 1.2rem;
+    color: var(--dark-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* Filters Bar */
+.filters-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--neon-primary);
+}
+
+body.neon-theme .filters-bar {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+    border: 1px solid var(--neon-primary);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.filter-group select {
+    padding: 10px;
+    border: 1px solid var(--neon-primary);
+    border-radius: 4px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: var(--neon-secondary);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.review-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--neon-primary);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--neon-secondary);
+}
+
+body.neon-theme .review-card {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+body.neon-theme .review-card:hover {
+    box-shadow: 0 0 20px var(--neon-primary);
+    border: 1px solid var(--neon-secondary);
+}
+
+.review-card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-card-header h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.review-meta {
+    display: flex;
+    gap: 10px;
+}
+
+.category {
+    background-color: var(--neon-primary);
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--neon-primary);
+    animation: neon-pulse 2s infinite;
+}
+
+.review-card-body {
+    padding: 1.5rem;
+}
+
+.review-card-body p {
+    color: var(--dark-secondary);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author {
+    font-size: 0.9rem;
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+.read-more {
+    color: var(--neon-primary);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--neon-primary);
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    opacity: 0.8;
+    color: var(--neon-secondary);
+    text-shadow: 0 0 10px var(--neon-secondary);
+}
+
+/* Star Rating */
+.star-rating {
+    color: var(--star-default);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.star-rating .filled {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.page-info {
+    color: var(--neon-primary);
+    text-shadow: 0 0 5px var(--neon-primary);
+    font-weight: bold;
+}
+
+.pagination .btn {
+    min-width: 100px;
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+body.neon-theme .pagination .btn {
+    border: 1px solid var(--neon-primary);
+    box-shadow: 0 0 5px rgba(0, 243, 255, 0.3);
+}
+
+.pagination .btn:hover {
+    background-color: var(--neon-primary);
+    color: #000;
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+.pagination .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: none;
+}
+
+/* Neon Animations */
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px var(--neon-primary), 0 0 10px var(--neon-primary);
+    }
+    to {
+        text-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-primary), 0 0 30px var(--neon-primary);
+    }
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+    50% {
+        box-shadow: 0 0 10px var(--neon-primary), 0 0 20px var(--neon-primary);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--neon-primary);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .movie-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .filters-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pagination .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-hero {
+        padding: 2rem 0;
+    }
+    
+    .movie-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .movie-hero p {
+        font-size: 1rem;
+    }
+}
