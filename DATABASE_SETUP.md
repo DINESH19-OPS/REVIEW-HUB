@@ -20,7 +20,7 @@ psql -U postgres
 Create the database and user:
 ```sql
 CREATE DATABASE reviewhub;
-CREATE USER reviewhub_user WITH ENCRYPTED PASSWORD 'reviewhub_password';
+CREATE USER reviewhub_user WITH ENCRYPTED PASSWORD '1234';
 GRANT ALL PRIVILEGES ON DATABASE reviewhub TO reviewhub_user;
 ```
 
